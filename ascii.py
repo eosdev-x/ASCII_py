@@ -1,6 +1,6 @@
 # Define table headers and dividers
-headers = ["Decimal", "Hexadecimal", "Binary", "Octal", "Char"]
-divider = "+-------+----------+--------+------+------+"
+headers = [" Decimal", "Hexadecimal", "Binary", "Octal", "Char"]
+divider = "+---------+-------------+---------+---------+--------+"
 
 # Define the ASCII data, mimicking the table's rows
 ascii_data = [
@@ -145,7 +145,7 @@ for row in ascii_data:
         char_repr = f"[{char_repr}]"  # Enclose it in brackets if so
 
     # Format the row, aligning numbers and using brackets for longer Char values
-    print("|" + " | ".join(f"{item:^7}" if isinstance(item, int) else f"{item:^7s}" for item in row[:-1]) + f"| {char_repr:^6} |")
+    print("| " + " |   ".join(f"{item:^7}" if isinstance(item, int) else f"{item:^7s}" for item in row[:-1]) + f"  | {char_repr:^6} |")
 
 print(divider)  # Bottom divider
 
